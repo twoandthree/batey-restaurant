@@ -28,6 +28,16 @@ header {
   width: 100%;
 }
 
+/* Flag styling to keep header proportions sleek */
+.header-flag {
+  height: 20px;          /* Perfect height match for header text */
+  width: auto;           /* Keeps standard flag aspect ratio */
+  vertical-align: middle;
+  margin-right: 0.6rem;  /* Clean breathing room before "Batey" */
+  border-radius: 3px;    /* Subtle rounded edges */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Very soft drop shadow */
+}
+
 .header-container {
   display: flex;
   justify-content: space-between;
@@ -80,7 +90,7 @@ nav a:hover {
   min-height: 50vh;
   
   /* Dark overlay combined with a high-res background image */
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+  background: linear-gradient(rgba(0, 0, 0, 0.853), rgba(0, 0, 0, 0.85)), 
               url('../assets/images/batey-lobby.png') center/cover no-repeat;
   color: #ffffff;
 }
