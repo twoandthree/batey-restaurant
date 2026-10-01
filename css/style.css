@@ -1,9 +1,9 @@
-@import "variables.css";
-@import "_header.css";
-@import "_hero.css";
-@import "_footer.css";
-@import "_about-section.css";
-@import "_carousel.css";
+@import "/css/variables.css";
+@import "/css/_header.css";
+@import "/css/_hero.css";
+@import "/css/_footer.css";
+@import "/css/_about-section.css";
+@import "/css/_carousel.css";
 
 html, body {
   width: 100%;
