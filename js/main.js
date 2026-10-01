@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     { src: 'assets/images/selected/food/camaron.jpeg', title: 'Camaron' },
     { src: 'assets/images/selected/food/carne-frita.jpeg', title: 'Carne Frita' },
     { src: 'assets/images/selected/food/canoa.jpeg', title: 'Canoa' },
-    { src: 'assets/images/selected/food/Striploin-rice-beans.jpeg', title: 'Striploin' },
+    { src: 'assets/images/selected/food/striploin.jpeg', title: 'Striploin' },
     { src: 'assets/images/selected/food/seafood-paella.jpeg', title: 'Seafood Paella' },
     { src: 'assets/images/selected/food/grilled-chicken-breast.jpeg', title: 'Grilled Chicken Breast' },
     { src: 'assets/images/selected/food/barenjena.jpeg', title: 'Barenjena' },    
