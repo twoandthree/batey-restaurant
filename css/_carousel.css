@@ -1,0 +1,168 @@
+/* --- 1. Carousel Header & Text-Width Divider --- */
+.carousel-header {
+  padding-left: clamp(1.5rem, 4vw, 4rem); /* Breathing room from the left screen edge */
+  margin-bottom: 1.5rem;
+  display: inline-block; /* Forces the entire header container to only be as wide as its contents */
+  width: auto;
+}
+
+/* Wrapper group to shrink-wrap the heading and divider to text width */
+.carousel-header-group {
+  display: inline-block;
+  width: auto;
+}
+
+.carousel-header .carousel-eyebrow {
+  color: #d4a359; /* Warm gold accent */
+  display: block;
+  margin-bottom: 0.25rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.carousel-header h2 {
+  color: #ffffff; /* Solid white for crystal-clear readability */
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* Gold Divider matching the exact width of the header text */
+.carousel-header-group .gold-divider {
+  height: 2px;
+  background-color: #d4a359;
+  width: 100%;
+  border: none;
+}
+
+/* Highly legible gold-to-white gradient for headers */
+.carousel-header .gold-gradient-text,
+.about-text-content .gold-gradient-text {
+  background-image: linear-gradient(135deg, #fff3d1 0%, #ffffff 40%, #ffffff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+/* --- 2. Carousel Wrapper & Buttons --- */
+.carousel-wrapper {
+  position: relative;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+/* Scroll Container - Keeps native touch swiping on mobile */
+.carousel-container {
+  display: flex;
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 2rem 3rem 3rem 3rem;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+}
+
+/* Hide scrollbar */
+.carousel-container::-webkit-scrollbar {
+  display: none;
+}
+.carousel-container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Arrow Button Styling */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: rgba(18, 18, 18, 0.85);
+  border: 1px solid rgba(212, 163, 89, 0.5);
+  color: #d4a359;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-btn:hover {
+  background: #d4a359;
+  color: #121212;
+  box-shadow: 0 0 15px rgba(212, 163, 89, 0.4);
+}
+
+.prev-btn { left: 1rem; }
+.next-btn { right: 1rem; }
+
+
+/* --- 3. Individual Cards & 4:3 Aspect Ratio --- */
+.carousel-item {
+  flex: 0 0 clamp(300px, 40vw, 420px);
+  scroll-snap-align: center;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+/* Staggered Heights */
+.item-high {
+  transform: translateY(-20px);
+}
+
+.item-low {
+  transform: translateY(20px);
+}
+
+/* Image Frame locked to 4:3 landscape ratio */
+.carousel-img-wrapper {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 20px;
+  border: 1px solid rgba(212, 163, 89, 0.4);
+  overflow: hidden;
+  background: rgba(18, 18, 18, 0.85);
+  box-shadow: 
+    0 12px 32px rgba(0, 0, 0, 0.45),
+    0 0 20px rgba(83, 196, 216, 0.15);
+}
+
+.carousel-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.carousel-item:hover .carousel-img {
+  transform: scale(1.05);
+}
+
+/* Dish Title Styling */
+.dish-title {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: #f4f4f4;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+
+/* --- Responsive Media Query --- */
+/* Only hide arrows on devices that lack a fine pointer (true touch devices like phones/tablets) */
+@media (hover: none) and (pointer: coarse) {
+  .carousel-btn {
+    display: none;
+  }
+}

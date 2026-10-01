@@ -1,0 +1,8 @@
+/* 1. Brand Palette Variables */
+:root {
+  --primary-turquoise: #53c4d8;  /* Batey Wall Turquoise */
+  --sand-gold: #d4a359;          /* Logo Script & Taíno Sun Gold */
+  --deep-blue: #0f2b5c;          /* Spiral Accent Blue */
+  --off-white: #f8fbfb;          /* Clean Background */
+  --dark-text: #1a2332;          /* Readable High-Contrast Text */
+}

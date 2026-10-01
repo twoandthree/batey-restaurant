@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Batey Puerto Rican Gastronomy</title>
 
@@ -15,17 +14,24 @@
 </head>
 
 <body>
-
 <header>
   <div class="header-container">
     <!-- <a href="#" class="logo">Batey</a> -->
     <!-- <a href="#" class="logo"><img src="assets/images/pr-flag.jpg" alt="Puerto Rico Flag" class="header-flag">Batey</a> -->
     <a href="#" class="logo">Batey<img src="assets/images/pr-flag.jpg" alt="Puerto Rico Flag" class="header-flag"></a>
-    <nav>
+    
+    <button class="hamburger" aria-label="Toggle Navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    
+    <nav class="nav-menu">
       <ul>
-        <li><a href="#menu">Menu</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#food">Our Food</a></li>
+        <li><a href="tel:+15201234567">Contact</a></li>
+        <li><a href="#order" class="order-btn">Order Now</a></li>
       </ul>
     </nav>
   </div>
@@ -37,34 +43,107 @@
       <h1>Welcome to Batey</h1>
       <p>The sea, and the sky, right in our kitchen.</p>
       <p>Come as you are. Leave with a satisfied heart</p>
-      <p>Nestled in the heart of Tucson, AZ, Batey Puerto Rican Gastronomy exudes warmth and welcomes guests with open arms.</p>
-      <p>Our diverse menu caters to every palate. Come for a quick lunch, solo meal at the bar, or a leisurly dinner with company.</p>
     </section>
+
+    <div id="divider"></div>
+<!-- 4. About Us / Our Story Section -->
+  <section class="about-section" id="about">
+    <div class="about-card">
+      <div class="about-image-wrapper">
+        <img src="assets/images/batey-logo.webp" alt="Handcrafted Puerto Rican flag decor at Batey's" class="about-img">
+      </div>
+      <div class="about-text-content">
+        <h2 class="gold-gradient-text">Our Story</h2>
+        <p>Nestled in the heart of Tucson, AZ, Batey Puerto Rican Gastronomy exudes warmth and welcomes guests with open arms.</p>
+        <p>We are a family-owned establishment passionate about sharing the authentic flavors and rich culture of the island.</p>
+        <p>From traditional favorites to innovative dishes, our menu is a tribute to our heritage. Come as you are. Leave with a satisfied heart. The sea, and the sky, right in our kitchen.</p>
+      </div>
+    </div>
+  </section>
+  
+<!-- 3. Appetizers Section -->
+  <section class="carousel-section" id="food">
+    <div class="carousel-header">
+      <h2 class="gold-gradient-text">Appetizers & Starters</h2>
+      <div class="gold-divider"></div>
+    </div>
+    <div class="carousel-wrapper">
+      <button class="carousel-btn prev-btn" aria-label="Previous dishes">&#10094;</button>
+      <div class="carousel-container" id="appetizersCarousel"></div>
+      <button class="carousel-btn next-btn" aria-label="Next dishes">&#10095;</button>
+    </div>
+  </section>
+
+  <!-- 4. Entrees Section -->
+  <section class="carousel-section">
+    <div class="carousel-header">
+      <h2 class="gold-gradient-text">Signature Entrees</h2>
+      <div class="gold-divider"></div>
+    </div>
+    <div class="carousel-wrapper">
+      <button class="carousel-btn prev-btn" aria-label="Previous dishes">&#10094;</button>
+      <div class="carousel-container" id="entreesCarousel"></div>
+      <button class="carousel-btn next-btn" aria-label="Next dishes">&#10095;</button>
+    </div>
+  </section>
+
+  <!-- 5. Desserts Section -->
+  <section class="carousel-section">
+    <div class="carousel-header">
+      <h2 class="gold-gradient-text">Desserts & Drinks</h2>
+      <div class="gold-divider"></div>
+    </div>
+    <div class="carousel-wrapper">
+      <button class="carousel-btn prev-btn" aria-label="Previous dishes">&#10094;</button>
+      <div class="carousel-container" id="dessertsCarousel"></div>
+      <button class="carousel-btn next-btn" aria-label="Next dishes">&#10095;</button>
+    </div>
+  </section>
+
+  <section id="atmosphere" class="carousel-section">
+    <div class="carousel-header">
+      <div class="carousel-header-group">
+        <h2 class="gold-gradient-text">Inside Batey</h2>
+        <hr class="gold-divider">
+      </div>
+    </div>
+
+    <div class="carousel-wrapper">
+      <button class="carousel-btn prev-btn" aria-label="Previous Slide">&#10094;</button>
+      
+      <!-- JavaScript will automatically populate the items inside here -->
+      <div class="carousel-container"></div>
+
+      <button class="carousel-btn next-btn" aria-label="Next Slide">&#10095;</button>
+    </div>
+  </section>
+
   </main>
 
-  <!-- Info Section -->
-<section class="info-bar">
-  <div class="info-card">
-    <h3>📍Location</h3>
-    <p>4230 N Oracle Rd #100<br>Tucson, AZ 85705</p>
-  </div>
-  <div class="info-card">
-    <h3>⏰ Hours</h3>
-    <p>Wed – Sat: 12 PM – 8 PM<br>Sun: 1 PM – 8 PM<br><small>Mon & Tue: Closed</small></p>
-  </div>
-  <div class="info-card">
-    <h3>📞 Contact</h3>
-    <p><a href="tel:5202323222">(520) 232-3222</a></p>
-  </div>
-</section>
-  
-
-  <!-- Footer -->
 <footer>
-  <div class="footer-content">
+  <!-- Info / Contact Cards -->
+  <div class="info-bar">
+    <div class="info-card">
+      <h3>Location</h3>
+      <p>4230 N Oracle Rd #100<br>Tucson, AZ 85705</p>
+    </div>
+    <div class="info-card">
+      <h3>Hours</h3>
+      <p>Wed – Sat: 12 PM – 8 PM<br>Sun: 1 PM – 8 PM<br><small>Mon & Tue: Closed</small></p>
+    </div>
+    <div class="info-card">
+      <h3>Contact</h3>
+      <p><a href="tel:5202323222">(520) 232-3222</a></p>
+    </div>
+  </div>
+
+  <!-- Copyright Bar -->
+  <div class="footer-bottom">
     <p>© 2026 Batey's Restaurant. All rights reserved.</p>
   </div>
 </footer>
+
+<script src="js/main.js"></script>
 
 </body>
 </html>

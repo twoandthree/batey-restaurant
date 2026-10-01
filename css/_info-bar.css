@@ -1,0 +1,79 @@
+/* 5. Info Bar Styles */
+.info-bar {
+  display: flex;
+  /* Automatically wraps items to the next row on smaller screens, 
+     and stays in a single fluid row on wider screens */
+  flex-wrap: wrap; 
+  justify-content: center;
+  align-items: stretch;
+  gap: clamp(1rem, 2vw, 2rem);
+  
+  padding: clamp(1.5rem, 3vw, 2.5rem) 1.5rem 2rem 1.5rem;
+  background-color: transparent; 
+  text-align: center; 
+
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Base Card Styles with Fluid Sizing */
+.info-card {
+  /* Flex-basis uses clamp so cards scale fluidly from mobile to desktop width */
+  flex: 1 1 clamp(260px, 30%, 340px);
+  min-height: 240px;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  padding: clamp(1.5rem, 2.5vw, 2.25rem) 1.5rem;
+  border-radius: 20px;
+  border: 1px solid rgba(212, 163, 89, 0.4);
+  
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  box-shadow: 
+    0 12px 32px rgba(0, 0, 0, 0.45),
+    0 0 20px rgba(83, 196, 216, 0.15);
+}
+
+/* Bright Cyan/Blue Heading for High Contrast on Black */
+.info-card h3 {
+  font-size: clamp(1.1rem, 1.5vw, 1.25rem);
+  color: #53c4d8; 
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.5px;
+}
+
+/* Individual Card Backgrounds */
+.info-card:nth-child(1) {
+  background-image: url('../assets/images/card-bg1.png');
+}
+
+.info-card:nth-child(2) {
+  background-image: url('../assets/images/card-bg2.png');
+}
+
+.info-card:nth-child(3) {
+  background-image: url('../assets/images/card-bg3.png');
+}
+
+.gold-gradient-text,
+.info-card p, 
+.info-card a {
+  background-image: linear-gradient(135deg, #ffe2ad 0%, #d4a359 50%, #ffffff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent; 
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-block; 
+}
+
+.info-card a:hover {
+  color: #d9534f;
+}

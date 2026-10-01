@@ -1,0 +1,32 @@
+/* 4. Hero Section */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: clamp(3rem, 6vw, 6rem) 1.5rem;
+  min-height: 50vh;
+  
+  /* Dark overlay combined with a high-res background image */
+  background: linear-gradient(rgba(0, 0, 0, 0.20), rgba(0, 0, 0, 0.843)), 
+              url('../assets/images/selected/restaurant/IMG_8953.jpeg') center/cover no-repeat;
+  color: #ffffff;
+}
+
+.hero h1 {
+  /* Scales fluidly from 2rem on mobile up to 3.8rem on widescreen desktops */
+  font-size: clamp(2rem, 4vw, 3.8rem);
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+}
+
+.hero p {
+  /* Scales fluidly from 1rem on mobile up to 1.35rem on larger displays */
+  font-size: clamp(1rem, 1.8vw, 1.35rem);
+  margin-bottom: 1.5rem;
+  max-width: 700px;
+  opacity: 0.9;
+  line-height: 1.5;
+}
