@@ -24,6 +24,8 @@ document.addEventListener('DOMContentLoaded', () => {
     { src: 'assets/images/selected/food/dessert.jpeg', title: 'Quesito con Fresa' },
     { src: 'assets/images/selected/food/Flan.jpg', title: 'Flan' },
     { src: 'assets/images/selected/food/pastel-de-guayaba.jpg', title: 'Pastel de Guayaba' },
+    { src: 'assets/images/selected/food/mayorca-edited.jpg', title: 'Mayorca' },
+    { src: 'assets/images/selected/food/tembleke-edited.jpg', title: 'Tembleke' },
     { src: 'assets/images/selected/food/bebidas.jpeg', title: 'Bebidas' },
   ];
 

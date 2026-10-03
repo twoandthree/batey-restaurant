@@ -1,6 +1,12 @@
+/* --- Master Section Content Wrapper --- */
+.section-content-wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 clamp(1.5rem, 4vw, 4rem);
+}
+
 /* --- 1. Carousel Header & Text-Width Divider --- */
 .carousel-header {
-  padding-left: clamp(1.5rem, 4vw, 4rem); /* Breathing room from the left screen edge */
   margin-bottom: 1.5rem;
   display: inline-block; /* Forces the entire header container to only be as wide as its contents */
   width: auto;
@@ -48,8 +54,7 @@
 /* --- 2. Carousel Wrapper & Buttons --- */
 .carousel-wrapper {
   position: relative;
-  max-width: 1400px;
-  margin: 0 auto;
+  width: 100%;
   display: flex;
   align-items: center;
 }
