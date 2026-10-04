@@ -4,6 +4,7 @@
 @import "footer.css";
 @import "about-section.css";
 @import "carousel.css";
+@import "map-section.css";
 
 html, body {
   width: 100%;
