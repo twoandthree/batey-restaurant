@@ -9,8 +9,8 @@
   min-height: 50vh;
   
   /* Dark overlay combined with a high-res background image */
-  background: linear-gradient(rgba(0, 0, 0, 0.20), rgba(0, 0, 0, 0.843)), 
-              url('../assets/images/selected/restaurant/IMG_8953.jpeg') center/cover no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.427), rgba(0, 0, 0, 0.843)), 
+              url('../assets/images/selected/restaurant/hero-restaurant-image.webp') center/cover no-repeat;
   color: #ffffff;
 }
 
