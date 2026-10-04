@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
       item.className = `carousel-item ${heightClass}`;
       item.innerHTML = `
         <div class="carousel-img-wrapper">
-          <img src="${dish.src}" alt="${dish.title}" class="carousel-img">
+          <img src="${dish.src}" alt="${dish.title}" class="carousel-img lightbox-trigger">
         </div>
         <span class="dish-title">${dish.title}</span>
       `;
@@ -96,4 +96,38 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const modal = document.getElementById('imageLightbox');
+  const modalImg = document.getElementById('lightboxImage');
+  const closeBtn = document.querySelector('.lightbox-close');
+
+  // Event Delegation: Listen for clicks anywhere on the document
+  document.addEventListener('click', (e) => {
+    // Check if the clicked element has the 'lightbox-trigger' class
+    if (e.target.classList.contains('lightbox-trigger')) {
+      modal.style.display = 'block';
+      modalImg.src = e.target.getAttribute('data-full') || e.target.src;
+    }
+  });
+
+  // Close via 'X' button
+  closeBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
+
+  // Close when clicking outside the image backdrop
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
+
+  // Close on pressing the 'Escape' key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.style.display === 'block') {
+      modal.style.display = 'none';
+    }
+  });
 });
